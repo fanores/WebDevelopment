@@ -1,3 +1,4 @@
+/***************************** TAG SELECTORS *******************************/
 body {
 				background-color: #EAF6D7;
 }
@@ -12,4 +13,18 @@ hr {
 
 h1, h3 {
 				color: #66BFBF;
+}
+
+img:hover {
+				border-style: dotted;
+}
+
+/************************** CLASS SELECTORS *******************************/
+.images {
+				border-radius: 100%;
+}
+
+/************************** CLASS SELECTORS *******************************/
+#heading {
+				font-size: 55px;
 }
