@@ -12,20 +12,35 @@ h1 {
 				text-decoration: underline;
 }
 
-.top-container {
+.main-container {
 				background-color: #EAF6D7;
 }
 
-.middle-container {
+.top-container {
 				background-color: red;
-				height: 200px;
-				width: 200px;
+				height: 100px;
+				width: 100px;
+				display: inline-block;
+				position: relative;
+				left: 200px;
+}
+
+.middle-container {
+				background-color: blue;
+				height: 100px;
+				width: 100px;
+				display: inline-block;
+				position: relative;
+				right: 100px;
 }
 
 .bottom-container {
-				background-color: blue;
-				height: 200px;
-				width: 200px;
+				background-color: yellow;
+				height: 100px;
+				width: 100px;
+				display: inline-block;
+				position: relative;
+				right: 100px;
 }
 
 /**************************** ID SELECTORS ********************************/
