@@ -43,16 +43,13 @@ p {
 				width: 100px;
 }
 
-.middle-container {
-				background-color: blue;
-				height: 100px;
-				width: 100px;
-}
+.middle-container {}
 
-.bottom-container {
-				background-color: yellow;
-				height: 100px;
+.bottom-container {}
+
+.image {
 				width: 100px;
+				height: 100px;
 }
 
 /**************************** ID SELECTORS ********************************/
