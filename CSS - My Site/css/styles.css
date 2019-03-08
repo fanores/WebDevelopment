@@ -19,7 +19,7 @@ p {
 				text-decoration: underline;
 }
 
-.main-container {
+.top-container {
 				background-color: #EAF6D7;
 				padding-top: 100px;
 				position: relative;
@@ -35,12 +35,6 @@ p {
 				position: absolute;
 				left: 300px;
 				bottom: 300px;
-}
-
-.top-container {
-				background-color: red;
-				height: 100px;
-				width: 100px;
 }
 
 .middle-container {}
