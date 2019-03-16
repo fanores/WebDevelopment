@@ -59,13 +59,41 @@ a {
 				bottom: 300px;
 }
 
-.middle-container {}
+.middle-container {
+				margin-top: 30px;
+}
 
 .bottom-container {}
 
-.image {
-				width: 100px;
-				height: 100px;
+.skill-row {
+				line-height: 2;
+				margin: 100px auto 100px auto;
+				text-align: left;
+				width: 50%;
+}
+
+.head-image {
+				width: 20%;
+				float: left;
+				margin-right: 30px;
+}
+
+.me-image {
+				width: 20%;
+}
+
+.lifts-image {
+				margin-left: 30px;
+				float: right;
+				width: 20%;
+}
+
+.skill-paragrahp-left {
+				clear: left;
+}
+
+.skill-paragrahp-right {
+				clear: right;
 }
 
 /**************************** ID SELECTORS ********************************/
