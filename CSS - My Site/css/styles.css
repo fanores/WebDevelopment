@@ -10,21 +10,29 @@ h1 {
 				font-size: 562.5%; Since % ane em inherit from parent's settings,
 				use unit REM instead. It is a selfstanding unit. */
 				font-size: 5.627rem;
-				margin: 50px auto 0px auto;
+				margin: 50px auto 0 auto;
 				font-family: 'Sacramento', cursive;
+				color: #66BFBF;
 }
 
 h2 {
 				font-family: 'Montserrat', sans-serif;
 				font-size: 2.6rem;
+				font-weight: normal;
+				color: #66BFBF;
 }
 
 h3 {
 				font-family: 'Montserrat', sans-serif;
+				color: #11999E;
 }
 
 p {
 				font-family: 'Montserrat', sans-serif;
+}
+
+a {
+				color: #11999E;
 }
 
 /************************** CLASS SELECTORS *******************************/
@@ -36,6 +44,7 @@ p {
 				background-color: #EAF6D7;
 				padding-top: 100px;
 				position: relative;
+				line-height: 2;
 }
 
 .top-cloud {
