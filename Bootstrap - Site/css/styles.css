@@ -1,0 +1,12 @@
+/* Common Section of the Web Page */
+h1 {
+  font-family: 'Montserrat';
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+/* CSS for Section Title */
+#title {
+  background-color: #ff4c68;
+}
