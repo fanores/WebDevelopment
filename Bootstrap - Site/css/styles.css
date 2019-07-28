@@ -55,7 +55,7 @@ p {
 }
 
 .container-fluid {
-	padding: 3% 15%;
+	padding: 3% 15% 7%;
 }
 
 /* CSS for Download Buttons */
@@ -67,11 +67,15 @@ p {
 .title-image {
 	transform: rotate(25deg);
 	width: 60%;
+	position: absolute;
+	right: 30%;
 }
 
 /* CSS for Section Features */
 #features {
+	background-color: #fff;
 	padding: 7% 15%;
+	position: relative;
 }
 
 .feature-box {
