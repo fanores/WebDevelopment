@@ -1,0 +1,126 @@
+/* Common Section of the Web Page */
+* {
+  box-sizing: border-box; /* the whole width of the formatted element*/
+}
+
+body {
+  /* margin: 0 10%; */
+  /* margin-left: auto;
+  margin-right: auto; */
+
+  margin: 0 auto;
+
+  /* width: 800px; */
+  max-width: 960px;
+  width: 96%;
+}
+
+h2 {
+  color: red;
+}
+
+/* p {
+  margin: 0;
+  text-indent: 1em;
+} */
+
+strong {
+  background-color: limegreen;
+}
+
+/* Custom Class Section of the Web Page */
+.blue {
+  color: blue;
+}
+
+.card {
+  background-color: olive;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 180px;
+  height: 200px;
+  line-height: 200px;
+  margin: 10px;
+  text-align: center;  /* inherited from #container as well */
+  vertical-align: bottom;
+  width: 200px;
+}
+
+.cleaner {
+  background-color: brown;
+  clear: both; /* only available for block elements */
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  clear: both;
+  content: ''; /* Used, just to create a dummy element for content formatting.*/
+  display: block;
+}
+
+.fb {
+  float: left;
+}
+
+.galerie {
+  text-align: center;
+  text-indent: 0;
+}
+
+.ib {
+  display: inline-block;
+}
+
+.img_left {
+  float: left;
+  margin-right: 10px;
+}
+
+.img_right {
+  float: right;
+  margin-left: 10px;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.tall {
+  height: 300px;
+}
+
+
+/* Custom ID Section of the Web Page */
+#container {
+  background-color: orange;
+  text-align: center;
+}
+
+#f1 {
+  background-color: olive;
+}
+
+#green {
+  color: green;
+}
+
+#w1 {
+  background-color: aquamarine;
+  /* box-sizing: border-box; /* the whole width of the formatted element*/
+  border-right: solid 50px black;
+  margin: 16px 0;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  padding: 10px 50px;
+  width: 500px;
+}
+
+#w2 {
+  background-color: orange;
+  margin: 16px 0;
+  width: 500px;
+}

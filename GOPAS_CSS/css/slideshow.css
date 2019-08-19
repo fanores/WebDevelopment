@@ -1,0 +1,29 @@
+/* Common Section of the Web Page */
+
+/* Custom Class Section of the Web Page */
+.clearfix::after {
+  clear: both;
+  content: ''; /* Used, just to create a dummy element for content formatting.*/
+  display: block;
+}
+
+.strip {
+  border-right: solid 1px white;
+  float: left;
+  overflow: hidden;
+  width: 50px;
+}
+
+.strip:hover {
+  width: 400px;
+}
+
+.strip img {
+  display: block;
+}
+
+/* Custom ID Section of the Web Page */
+#slideshow {
+  background-color: grey;
+  width: 600px;
+}
