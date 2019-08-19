@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>CSS3 / Interaktivní flexbox</title>
+  
+  <style>
+   
+   #o {
+    text-align: center;
+   }
+   
+   #c {
+    background-color: rgb(160,160,160);
+    /* border: 1px solid black; */
+    /* border-radius: 10px; */
+    display: flex;
+    height: 400px;
+    /* padding-bottom: 50%; */
+    /* justify-content: space-between; */
+    /* overflow: hidden; */
+    /* width: 30%; */
+    transition: all 1s;
+   }
+   #c > div {
+    background-color: rgba(51,204,0,0.5);
+    /* border-radius: 10px; */
+    border-left: solid 1px white;
+    border-bottom: solid 1px white;
+    box-sizing: border-box;
+    color: rgb(255,255,255);
+    /* float: left; */
+    /* flex-grow: 1; */
+    font:  bold 80px/100px Arial, sans-serif;
+    text-align: center;
+    transition: all 1s;    
+    /* width: 100px; */
+   }
+   
+  </style>
+  
+  </head>
+  <body>
+
+   <h1 data-items>CSS3 / Interaktivní flexbox</h1>
+   
+   <!-- <iframe width="600" height="100" frameborder="0" name="example">
+   </iframe> -->
+   
+   <script type="text/javascript">
+   
+    //example.document.write('ahoj');
+    //example.document.close();
+    
+   </script>
+   
+   <div id="o">
+   <div id="c">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+   </div>
+   </div>
+
+   <p>Lorem ipsum dolor sit amet consectetuer facilisis justo metus tempor egestas. Laoreet Quisque Maecenas tempus ut quis vel laoreet morbi Sed sapien. Vitae Phasellus adipiscing elit ante consectetuer accumsan gravida Nulla nec volutpat. Rutrum In hendrerit cursus pede auctor Quisque augue congue id et. Lacus velit id a nascetur Vestibulum velit ante faucibus tortor Duis. Et In nulla elit eros augue vel et semper.</p>
+
+   <form id="flexContainer">
+
+    <label>
+     width
+     <select name="width">
+      <option selected value="100%">auto</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+      <option>500px</option>
+      <option>600px</option>                  
+     </select> 
+    </label>
+    
+    <label>
+     height
+     <select name="height">
+      <option selected>auto</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+      <option>500px</option>            
+     </select> 
+    </label>    
+
+    <label>
+     flex-direction
+     <select name="flex-direction">
+      <option selected>row</option>
+      <option>row-reverse</option>
+      <option>column</option>
+      <option>column-reverse</option>
+     </select> 
+    </label>
+
+    <label>
+     flex-wrap
+     <select name="flex-wrap">
+      <option selected>nowrap</option>
+      <option>wrap</option>
+      <option>wrap-reverse</option>
+     </select> 
+    </label>
+    
+    <label>
+     justify-content
+     <select name="justify-content">
+      <option selected>flex-start</option>
+      <option>flex-end</option>
+      <option>center</option>
+      <option>space-between</option>
+      <option>space-around</option>
+      <option>space-evenly</option>
+     </select> 
+    </label>
+    
+    <label>
+     align-items
+     <select name="align-items">
+      <option>flex-start</option>
+      <option>flex-end</option>
+      <option>center</option>
+      <option>baseline</option>
+      <option selected>stretch</option>
+     </select> 
+    </label>
+    
+    </form>
+    
+    <form id="flexItems">
+    
+    <fieldset>
+    
+    <label>
+     flex-grow
+     <select name="flex-grow" data-item="0">
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     flex-shrink
+     <select name="flex-shrink" data-item="0">
+      <option>0</option>
+      <option selected>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     flex-basis
+     <select name="flex-basis" data-item="0">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     min-width
+     <select name="min-width" data-item="0">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     width
+     <select name="width" data-item="0">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     height
+     <select name="height" data-item="0">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     order
+     <select name="order" data-item="0">
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     align-self
+     <select name="align-self" data-item="0">
+      <option selected>auto</option>
+      <option>flex-start</option>
+      <option>flex-end</option>
+      <option>center</option>
+      <option>stretch</option>
+     </select> 
+    </label>    
+    
+    </fieldset>
+
+    <fieldset>
+    
+    <label>
+     flex-grow
+     <select name="flex-grow" data-item="1">
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     flex-shrink
+     <select name="flex-shrink" data-item="1">
+      <option>0</option>
+      <option selected>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     flex-basis
+     <select name="flex-basis" data-item="1">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     min-width
+     <select name="min-width" data-item="1">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     width
+     <select name="width" data-item="1">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     height
+     <select name="height" data-item="1">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     order
+     <select name="order" data-item="1">
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     align-self
+     <select name="align-self" data-item="1">
+      <option selected>auto</option>
+      <option>flex-start</option>
+      <option>flex-end</option>
+      <option>center</option>
+      <option>stretch</option>
+     </select> 
+    </label>
+    
+    </fieldset>
+    
+<fieldset>
+    
+    <label>
+     flex-grow
+     <select name="flex-grow" data-item="2">
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     flex-shrink
+     <select name="flex-shrink" data-item="2">
+      <option>0</option>
+      <option selected>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     flex-basis
+     <select name="flex-basis" data-item="2">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     min-width
+     <select name="min-width" data-item="2">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     width
+     <select name="width" data-item="2">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     height
+     <select name="height" data-item="2">
+      <option selected>auto</option>
+      <option>0px</option>
+      <option>100px</option>
+      <option>200px</option>
+      <option>300px</option>
+      <option>400px</option>
+     </select> 
+    </label>
+    
+    <label>
+     order
+     <select name="order" data-item="2">
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+     </select> 
+    </label>
+    
+    <label>
+     align-self
+     <select name="align-self" data-item="2">
+      <option selected>auto</option>
+      <option>flex-start</option>
+      <option>flex-end</option>
+      <option>center</option>
+      <option>stretch</option>
+     </select> 
+    </label>
+    
+    </fieldset>
+    
+                                                
+    
+   </form>
+
+   <p>
+    <button type="button" id="test">Reset</button>
+   </p>
+
+   <script type="text/javascript">
+  
+   var x = 5;
+   
+   var c =  document.querySelector('#c');
+   var elements = document.querySelectorAll('select');
+   var childs = document.querySelectorAll('#c > div');
+   
+   function update () {
+    elements.forEach(function(item){
+     var flexItem;
+     flexItem = item.getAttribute('data-item');
+   
+     if (flexItem !== null) {
+      childs[flexItem].style[item.name] = item.value;
+     } else {
+      c.style[item.name] = item.value;
+     }    
+    })
+   }
+   
+   update();
+   
+   elements.forEach(function(item){   
+    item.onchange = update; 
+   });
+   
+   document.querySelector('#test').onclick = function () {
+    document.querySelectorAll('form').forEach(function(item){
+     item.reset();
+    });
+    update();
+   }   
+    
+   </script>
+
+  </body>
+</html>
