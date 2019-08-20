@@ -1,0 +1,14 @@
+/* Common Section of the Web Page */
+h1 {
+  color: green;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    color: orangered;
+  }
+}
+
+/* Custom Class Section of the Web Page */
+
+/* Custom ID Section of the Web Page */
