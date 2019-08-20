@@ -1,0 +1,52 @@
+/* Common Section of the Web Page */
+
+/* Custom Class Section of the Web Page */
+
+/* Custom ID Section of the Web Page */
+#back {
+    transform: perspective(1200px) rotateY(-179.9deg);
+}
+
+#card:hover #back {
+    transform: perspective(1200px) rotateY(0deg);
+}
+
+#card {
+  background-color: grey;
+  height: 300px;
+  position: relative;
+  width: 400px;
+}
+
+#card img {
+backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform 3000ms;
+}
+
+#card:hover #front {
+  transform: perspective(1200px) rotateY(179.9deg);
+}
+
+#front {
+  transform: perspective(1200px) rotateY(0deg);
+}
+
+#obr {
+  /* If we don't want to see the back of the image after rotation, use this: */
+  /* backface-visibility: hidden; */
+
+  /* Uses the graphic acceleration! Better than simple 'translate'. */
+  /* transform: translate3d(100px, 0, 0);  */
+
+  /* transform-origin: 0 0; */
+  /* transform: translate3d(100px, 0, 0) rotate(45deg); */
+
+  /* This transformation changes the coordinates, by applying the scale function. */
+  /* transform: scale(-1, 1) translate3d(100px, 0, 0); */
+  /* transform-origin: 0 0; */
+
+  transform: perspective(600px) rotateY(45deg);
+}

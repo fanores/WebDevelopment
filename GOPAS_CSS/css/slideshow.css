@@ -1,4 +1,7 @@
 /* Common Section of the Web Page */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* Custom Class Section of the Web Page */
 .clearfix::after {
@@ -7,10 +10,16 @@
   display: block;
 }
 
+.hide {
+  display: none;
+  /* visibility: hidden;  it reserves the place, so the empty space is hidden */
+}
+
 .strip {
   border-right: solid 1px white;
   float: left;
   overflow: hidden;
+  transition: width 500ms;
   width: 50px;
 }
 
@@ -18,12 +27,39 @@
   width: 400px;
 }
 
+.strip:hover .title {
+  /* display: inline; */
+  /* visibility: visible; */
+  color: white;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
 .strip img {
   display: block;
 }
 
+.title {
+  /* color: grey; */
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  /* visibility: hidden; */
+}
+
 /* Custom ID Section of the Web Page */
+#p1 {
+  background-color: orange;
+  left: 50px;
+  position: relative;
+  top: 50px;
+  width: 50%;
+}
+
 #slideshow {
   background-color: grey;
-  width: 600px;
+  position: relative;
+  width: 700px;
 }
