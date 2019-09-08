@@ -5,7 +5,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat';
+	font-family: 'Montserrat';
 	font-weight: 900;
 }
 
@@ -52,20 +52,25 @@ p {
 	padding: 7% 15%;
 }
 
+/* Sections  */
+.colored-section {
+	background-color: #ff4c68;
+	color: #fff;
+}
+
+.white-section {
+	background-color: #fff;
+}
+
 /* CSS for Download Buttons */
 .download-button {
 	margin: 5% 3% 5% 0;
 }
 
 /* CSS for Section Title */
-#title {
-	background-color: #ff4c68;
-	color: #fff;
-	text-align: left;
-}
-
 #title .container-fluid {
 	padding: 3% 15% 7%;
+	text-align: left;
 }
 
 /* CSS for Title Image */
@@ -78,7 +83,6 @@ p {
 
 /* CSS for Section Features */
 #features {
-	background-color: #fff;
 	position: relative;
 }
 
@@ -102,7 +106,6 @@ p {
 /* CSS for Testimonials */
 #testimonials {
 	background-color: #ef8172;
-	color: #fff;
 }
 
 .testimonial-image {
@@ -142,11 +145,6 @@ price-text {
 }
 
 /* CSS for Call to Action */
-#cta {
-	background-color: #ff4c68;
-	color: #fff;
-}
-
 /* CSS for Footer */
 .social-icon {
 	margin: 20px 10px;
