@@ -15,3 +15,11 @@ function getMilk(money) {
 
 var change = getMilk(2);
 console.log("your change is " + change);
+
+/* Another example. */
+function printDogAgeInHumanYears() {
+    console.log("Human age of the dog is: " + humanAge);
+}
+var dogAge = prompt("Dog age is?");
+humanAge = ((dogAge -2) * 4) + 21;
+printDogAgeInHumanYears();
