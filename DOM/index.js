@@ -1,2 +1,1 @@
-alert("Hello3");
-document.querySelector("h1").innerHTML = "Good bye";
+document.querySelector("body").querySelector("ul").lastElementChild.innerHTML = "Stevo";
