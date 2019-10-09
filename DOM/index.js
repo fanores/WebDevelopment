@@ -6,3 +6,6 @@ document.querySelector("li a").style.color = "red";
 
 /* Change the background color of the button. */
 document.querySelector("button").style.backgroundColor = "yellow";
+
+/* Change the class associated to an element. */
+document.querySelector("h1").classList.toggle("huge");
