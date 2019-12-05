@@ -1,6 +1,6 @@
-// add an event listener for the first button
-document.querySelector("button").addEventListener("click", handleButtonClick);
-
-function handleButtonClick() {
-  alert("I got clicked!");
+// add an event listener for all "drum" button
+for (i = 0; i < document.querySelectorAll(".drum").length; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+    alert("I got clicked!");
+  });
 }
