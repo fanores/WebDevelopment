@@ -46,12 +46,26 @@ function playSound(letter) {
   }
 }
 
+// function for an animation of the buttons
+function buttonAnimation(keyPressed) {
+  var pressedButton = document.querySelector("." + keyPressed);
+
+  pressedButton.classList.add("pressed");
+
+  setTimeout(function(){
+    pressedButton.classList.remove("pressed");
+  }, 100);
+
+}
+
 // add an event listener for all "drum" button
 for (i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     // play a sound for the pressed button
     var buttonInnerHtml = this.innerHTML;
     playSound(buttonInnerHtml);
+
+    buttonAnimation(buttonInnerHtml);
 
     this.style.color = "white";
   });
@@ -61,4 +75,6 @@ for (i = 0; i < document.querySelectorAll(".drum").length; i++) {
 // add key press event addEventListener
 document.addEventListener("keydown", function(event){
   playSound(event.key);
+
+  buttonAnimation(event.key);
 });
