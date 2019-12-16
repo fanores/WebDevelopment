@@ -16,6 +16,8 @@ $(document).ready(function(){
 
   $("button").click(function() {
     $("h1").css("color","red");
+
+    $("h1").slideUp().slideDown().animate({opacity: 0.5});
   });
 
   $("input").keydown(function(event) {
