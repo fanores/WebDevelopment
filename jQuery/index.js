@@ -8,4 +8,22 @@ $(document).ready(function(){
 
   // change element property
   $("a").attr("href", "https://www.apple.com");
+
+  // add event listener to element
+  $("h1").click(function() {
+    $("h1").css("color","purple");
+  });
+
+  $("button").click(function() {
+    $("h1").css("color","red");
+  });
+
+  $("input").keydown(function(event) {
+    console.log(event.key);
+  });
+
+  // change the h1 text to reflect the key pressed
+  $(document).keydown(function(event) {
+    $("h1").text(event.key);
+  });
 });
