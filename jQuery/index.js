@@ -5,4 +5,7 @@ $(document).ready(function(){
 
   // change properties for all buttons
   $("button").html("<em>Do it!</em>");
+
+  // change element property
+  $("a").attr("href", "https://www.apple.com");
 });
