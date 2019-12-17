@@ -25,6 +25,8 @@ $(".btn").click(function() {
   userClickedPattern.push(userChosenColour);
 
   playSound(userChosenColour);
+
+  animatePress(userChosenColour);
 });
 
 // handle the generated game sequence
