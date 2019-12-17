@@ -1,6 +1,16 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
+var userClickedPattern = [];
 
+// handler for user, when he clicks on a button
+$(".btn").click(function() {
+  var userChosenColour = $(this).attr("id");
+
+  userClickedPattern.push(userChosenColour);
+});
+
+
+// handle the generated game sequence
 function gameSequence() {
   var randomNumber = ( Math.random() * 4 );
   randomNumber = Math.floor(randomNumber);
