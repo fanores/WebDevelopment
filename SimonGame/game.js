@@ -8,6 +8,16 @@ function playSound(chosenColour) {
   audio.play();
 };
 
+// animate the use colour selection
+function animatePress(currentColour) {
+  $("#" + currentColour).addClass("pressed");
+
+  // set timout in order to remove the assigned class
+  setTimeout(function() {
+    $("#" + currentColour).removeClass("pressed");
+  }, 100);
+};
+
 // handler for user, when he clicks on a button
 $(".btn").click(function() {
   var userChosenColour = $(this).attr("id");
