@@ -1,6 +1,17 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
+var started = false;
+var level = 0;
+
+// call the game, when it is started
+$(document).keydown(function() {
+  if (!started) {
+    $("#level-title").text("Level: " + level);
+    gameSequence();
+    started = true;
+  };
+});
 
 // play a sound
 function playSound(chosenColour) {
@@ -31,6 +42,10 @@ $(".btn").click(function() {
 
 // handle the generated game sequence
 function gameSequence() {
+
+  level++;
+  $("#level-title").text("Level: " + level);
+
   var randomNumber = ( Math.random() * 4 );
   randomNumber = Math.floor(randomNumber);
 
