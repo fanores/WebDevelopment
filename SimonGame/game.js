@@ -10,14 +10,14 @@ $(document).keydown(function() {
     $("#level-title").text("Level: " + level);
     gameSequence();
     started = true;
-  };
+  }
 });
 
 // play a sound
 function playSound(chosenColour) {
   var audio = new Audio("sounds/" + chosenColour + ".mp3");
   audio.play();
-};
+}
 
 // animate the use colour selection
 function animatePress(currentColour) {
@@ -27,7 +27,23 @@ function animatePress(currentColour) {
   setTimeout(function() {
     $("#" + currentColour).removeClass("pressed");
   }, 100);
-};
+}
+
+// check the user answer
+function checkAnswer(currentLevel) {
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    console.log("success");
+
+    if (gamePattern.length === userClickedPattern.length) {
+      setTimeout(function(){
+        gameSequence();
+      }, 1000);
+    }
+
+  } else {
+    console.log("wrong");
+  }
+}
 
 // handler for user, when he clicks on a button
 $(".btn").click(function() {
@@ -38,10 +54,14 @@ $(".btn").click(function() {
   playSound(userChosenColour);
 
   animatePress(userChosenColour);
+
+  checkAnswer(userClickedPattern.length - 1);
 });
 
 // handle the generated game sequence
 function gameSequence() {
+
+  userClickedPattern = [];
 
   level++;
   $("#level-title").text("Level: " + level);
@@ -58,4 +78,4 @@ function gameSequence() {
 
   // play a sound based on randomChosenColour
   playSound(randomChosenColour);
-};
+}
