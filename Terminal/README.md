@@ -31,6 +31,9 @@ mkdir <directory_name>
 ```
 // shows all content
 ls
+
+// show content in a list format
+ls -l
 ```
 
 ```
