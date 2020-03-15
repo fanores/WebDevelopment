@@ -1,12 +1,13 @@
 # Express with Node.js
 
 ## Useful links for further education:
-1. [aaa](https://aaa.aa)
-2. 
+1. Express: [Documentation](https://expressjs.com)
+2.
 
 ### List of Commands:
 
-###### Chapter:
+###### Express initialization:
 ```
-example command
+// install express
+npm install express
 ```
