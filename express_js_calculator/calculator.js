@@ -10,7 +10,8 @@ app.get("/", function(request, response) {
   // console.log(request);
 
   // send response to browser
-  response.send("<h1>Hello!</>");
+  console.log(__dirname);
+  response.sendFile(__dirname + "/index.html");
 });
 
 // listen on port 3000 for any HTTP requests
