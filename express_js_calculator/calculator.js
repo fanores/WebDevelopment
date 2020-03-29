@@ -42,8 +42,8 @@ app.post("/bmicalculator", function(request, response) {
   console.log("Weight: " + request.body.weight);
   console.log("Height: " + request.body.height);
 
-  var weight = Number(request.body.weight);
-  var height = Number(request.body.height);
+  var weight = parseFloat(request.body.weight);
+  var height = parseFloat(request.body.height);
   var bmi = (weight / (height * height));
 console.log("Your BMI is (before round): " + bmi);
   bmi = Math.round(bmi);
