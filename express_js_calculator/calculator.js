@@ -30,6 +30,28 @@ app.post("/", function(request, response) {
   response.send("Result is: " + result);
 });
 
+// handle GET request for BMI Calculator
+app.get("/bmicalculator", function(request, response) {
+  // send response to browser
+  response.sendFile(__dirname + "/bmiCalculator.html");
+});
+
+// handle POST request for BMI Calculator
+app.post("/bmicalculator", function(request, response) {
+  console.log(request.body);
+  console.log("Weight: " + request.body.weight);
+  console.log("Height: " + request.body.height);
+
+  var weight = Number(request.body.weight);
+  var height = Number(request.body.height);
+  var bmi = (weight / (height * height));
+console.log("Your BMI is (before round): " + bmi);
+  bmi = Math.round(bmi);
+  console.log("Your BMI is (after round): " + bmi);
+
+  response.send("Your BMI is: " + bmi);
+});
+
 // listen on port 3000 for any HTTP requests
 app.listen(3000, function() {
   console.log("Server started on port 3000!");
