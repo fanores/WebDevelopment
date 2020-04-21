@@ -25,11 +25,18 @@ app.get("/", function(request, response){
       const temperature = weatherData.main.temp;
       console.log("Temperature is: " + temperature);
 
-      const description = weatherData.weather[0].description;
-      console.log(description);
+      const weatherDescription = weatherData.weather[0].description;
+      console.log(weatherDescription);
+
+      const weatherIcon = weatherData.weather[0].icon;
+      const weatherIconUrl = "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
+
+      response.write("<h1>Weather is " + weatherDescription + "<h1>");
+      response.write("<h1>Temperature in Nemsova is: " + temperature + " degrees Celcius.</h1>");
+      response.write("<img src=" + weatherIconUrl +">");
+      response.send();
     });
   });
-  response.send("Server is up and running.");
 });
 
 app.listen(3000, function() {
