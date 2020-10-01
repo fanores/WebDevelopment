@@ -16,13 +16,13 @@ p {
 /* Headings */
 .big-heading {
 	font-family: 'Montserrat';
-	font-size: 3.5rem;
-	font-weight: 900;
+	font-size: 4rem;
+	font-weight: 950;
 	line-height: 1.5;
 }
 
 .section-heading {
-	font-size: 3rem;
+	font-size: 3.5rem;
 	line-height: 1.5;
 }
 
@@ -54,12 +54,12 @@ p {
 
 /* Sections  */
 .colored-section {
-	background-color: #ff4c68;
-	color: #fff;
+	background-color: black;
+	color: pink;
 }
 
 .white-section {
-	background-color: #fff;
+	background-color: white;
 }
 
 /* CSS for Download Buttons */
@@ -95,12 +95,12 @@ p {
 }
 
 .icon {
-	color: #ef8172;
-	margin-bottom: 1rem;
+	color: blue;
+	margin-bottom: 1.5rem;
 }
 
 .icon:hover {
-	color: #ff4c68;
+	color: darkred;
 }
 
 /* CSS for Testimonials */
